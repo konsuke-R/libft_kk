@@ -1,16 +1,28 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 09:31:29 by kkono             #+#    #+#             */
+/*   Updated: 2025/04/26 09:32:46 by kkono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t strlcpy(char *dest, const char *restrict src, size_t dsize)
+
+
+#include "libft.h"
+
+size_t ft_strlcpy(char *dest, const char *restrict src, size_t dsize)
 {
 	size_t i;
 	size_t size_s;
 
-	size_s = 0;
-	while (src[size_s])
-		size_s++;
-
+	size_s = ft_strlen(src);
 	i = 0;
+	if (dsize == 0)
+		return (size_s);
 	if (size_s < dsize)
 	{
 		while (i < size_s)

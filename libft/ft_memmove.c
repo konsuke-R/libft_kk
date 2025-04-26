@@ -1,9 +1,22 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 09:30:17 by kkono             #+#    #+#             */
+/*   Updated: 2025/04/26 09:33:05 by kkono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+#include "libft.h"
 
 #define BUF_SIZE 16
 
-void *memmove(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char *s1;
 	const unsigned char *s2;

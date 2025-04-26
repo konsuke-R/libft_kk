@@ -1,5 +1,18 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 09:32:20 by kkono             #+#    #+#             */
+/*   Updated: 2025/04/26 09:32:31 by kkono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+#include "libft.h"
 
 int ft_toupper(int c)
 {
@@ -8,15 +21,15 @@ int ft_toupper(int c)
 	return c;
 }
 
-int main(void)
-{
-	char c;
-	int ans;
+// int main(void)
+// {
+// 	char c;
+// 	int ans;
 	
-	c = 'c';
-	printf("%c\n", c);
-	ans = ft_toupper(c);
-	printf("%c\n",ans);
-	return (0);
-}
+// 	c = 'c';
+// 	printf("%c\n", c);
+// 	ans = ft_toupper(c);
+// 	printf("%c\n",ans);
+// 	return (0);
+// }
 

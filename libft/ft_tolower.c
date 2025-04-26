@@ -1,5 +1,18 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 09:32:15 by kkono             #+#    #+#             */
+/*   Updated: 2025/04/26 09:32:30 by kkono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+#include "libft.h"
 
 int ft_tolower(int c)
 {
@@ -8,13 +21,13 @@ int ft_tolower(int c)
 	return c;
 }
 
-int main(void)
-{
-	char c;
-	int ans;
-	c = 'A';
-	printf("%c\n",c);
-	ans = ft_tolower(c);
-	printf("%c\n", ans);
-	return (0);
-}
+// int main(void)
+// {
+// 	char c;
+// 	int ans;
+// 	c = 'A';
+// 	printf("%c\n",c);
+// 	ans = ft_tolower(c);
+// 	printf("%c\n", ans);
+// 	return (0);
+// }

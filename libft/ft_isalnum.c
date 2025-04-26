@@ -1,5 +1,18 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 09:29:13 by kkono             #+#    #+#             */
+/*   Updated: 2025/04/26 09:29:13 by kkono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+#include "libft.h"
 
 int ft_isalnum(int c)
 {
@@ -8,20 +21,20 @@ int ft_isalnum(int c)
 	return (0);
 }
 
-int main(void)
-{
-	char *c1;
-	char *c2;
+// int main(void)
+// {
+// 	char *c1;
+// 	char *c2;
 
-	c1 = "a";
-	c2 = "1";
+// 	c1 = "a";
+// 	c2 = "1";
 
-	if (ft_isalnum(c1) == 1)
-		printf("isalnum\n");
-	if (ft_isalnum(c2) == 1)
-		printf("isalnum\n");
-	else
-		printf("not isalnum\n");
-	return (0);
-}
+// 	if (ft_isalnum(*c1) == 1)
+// 		printf("isalnum\n");
+// 	if (ft_isalnum(*c2) == 1)
+// 		printf("isalnum\n");
+// 	else
+// 		printf("not isalnum\n");
+// 	return (0);
+// }
 

@@ -1,4 +1,18 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 09:30:54 by kkono             #+#    #+#             */
+/*   Updated: 2025/04/26 09:32:55 by kkono            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
+#include "libft.h"
 
 char **free_arg(char **str, int i)
 {
@@ -92,22 +106,22 @@ char **ft_split(char const *s, char c)
 	return (str);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-		char **result = ft_split("abc def  ghi", ' ');
-			if (!result)
-					{
-								printf("ft_split failed\n");
-										return (1);
-											}
+// int main(void)
+// {
+// 		char **result = ft_split("abc def  ghi", ' ');
+// 			if (!result)
+// 					{
+// 								printf("ft_split failed\n");
+// 										return (1);
+// 											}
 
-				for (int i = 0; result[i]; i++)
-						{
-									printf("result[%d] = \"%s\"\n", i, result[i]);
-											free(result[i]);
-												}
-					free(result);
-						return (0);
-}
+// 				for (int i = 0; result[i]; i++)
+// 						{
+// 									printf("result[%d] = \"%s\"\n", i, result[i]);
+// 											free(result[i]);
+// 												}
+// 					free(result);
+// 						return (0);
+// }
