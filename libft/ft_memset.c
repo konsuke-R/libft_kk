@@ -10,27 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
 #define BUF_SIZE 16
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *ptr;
+	unsigned char	*ptr;
+	size_t			i;
+
 	ptr = (unsigned char *)s;
-	size_t i;
-
 	i = 0;
-
 	while (i < n)
 	{
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-
-	return s;
+	return (s);
 }
 
 // int main(void)

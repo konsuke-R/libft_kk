@@ -6,15 +6,13 @@
 /*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 09:30:54 by kkono             #+#    #+#             */
-/*   Updated: 2025/04/26 09:32:55 by kkono            ###   ########.fr       */
+/*   Updated: 2025/04/26 12:43:41 by kkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-char **free_arg(char **str, int i)
+char	**free_arg(char **str, int i)
 {
 	while (i > 0)
 	{
@@ -25,10 +23,10 @@ char **free_arg(char **str, int i)
 	return (0);
 }
 
-int ft_ct_str(char const *s, char c)
+int	ft_ct_str(char const *s, char c)
 {
-	int i;
-	int ct;
+	int	i;
+	int	ct;
 
 	i = 0;
 	ct = 0;
@@ -46,9 +44,9 @@ int ft_ct_str(char const *s, char c)
 	return (ct);
 }
 
-char *ft_putword(char *str, char const *s, int i, int word_len)
+char	*ft_putword(char *str, char const *s, int i, int word_len)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	while (word_len > 0)
@@ -61,11 +59,11 @@ char *ft_putword(char *str, char const *s, int i, int word_len)
 	return (str);
 }
 
-char **ft_split_w(char const *s, char c, char **str, int ct_w)
+char	**ft_split_w(char const *s, char c, char **str, int ct_w)
 {
-	int i;
-	int word;
-	int word_len;
+	int	i;
+	int	word;
+	int	word_len;
 
 	i = 0;
 	word = 0;
@@ -79,7 +77,7 @@ char **ft_split_w(char const *s, char c, char **str, int ct_w)
 			i++;
 			word_len++;
 		}
-		str[word] = (char *)malloc(sizeof(char) * (word_len +  1));
+		str[word] = (char *)malloc(sizeof(char) * (word_len + 1));
 		if (!str[word])
 			return (free_arg(str, word));
 		ft_putword(str[word], s, i, word_len);
@@ -90,15 +88,14 @@ char **ft_split_w(char const *s, char c, char **str, int ct_w)
 	return (str);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **str;
-	int ct_w;
+	char	**str;
+	int		ct_w;
 
 	if (!s)
 		return (0);
-	
-	ct_w = ft_ct_str(s,c);
+	ct_w = ft_ct_str(s, c);
 	str = (char **)malloc(sizeof(char *) * (ct_w + 1));
 	if (!str)
 		return (0);
@@ -119,7 +116,8 @@ char **ft_split(char const *s, char c)
 
 // 				for (int i = 0; result[i]; i++)
 // 						{
-// 									printf("result[%d] = \"%s\"\n", i, result[i]);
+// 									printf("result[%d] = \"%s\"\n", i,
+//											result[i]);
 // 											free(result[i]);
 // 												}
 // 					free(result);

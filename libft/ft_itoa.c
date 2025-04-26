@@ -10,13 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-int get_len(int n)
+int	get_len(int n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n <= 0)
@@ -29,21 +27,21 @@ int get_len(int n)
 	return (len);
 }
 
-char *put_chars(char *s, unsigned int nb, int len)
+char	*put_chars(char *s, unsigned int nb, int len)
 {
 	while (nb > 0)
 	{
 		s[len--] = '0' + (nb % 10);
 		nb = nb / 10;
 	}
-	return s;
+	return (s);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *s;
-	int len;
-	unsigned int nb;
+	char			*s;
+	int				len;
+	unsigned int	nb;
 
 	len = get_len(n);
 	s = (char *)malloc(sizeof(char) * (len + 1));
@@ -53,7 +51,7 @@ char *ft_itoa(int n)
 	if (n == 0)
 	{
 		s[0] = '0';
-		return s;
+		return (s);
 	}
 	if (n < 0)
 	{

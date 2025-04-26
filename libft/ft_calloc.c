@@ -10,39 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *mem;
+	void	*mem;
 
 	if (size != 0 && nmemb > SIZE_MAX / size)
-		return NULL;
+		return (NULL);
 	mem = malloc(nmemb * size);
 	if (!mem)
-		return NULL;
-	ft_memset(mem, 0, size*nmemb);
-	return mem;
+		return (NULL);
+	ft_memset(mem, 0, size * nmemb);
+	return (mem);
 }
-	
 
-
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *ptr;
-	ptr = (unsigned char *)s;
-	size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
+	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return s;
+	return (s);
 }
-

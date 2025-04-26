@@ -10,28 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
 #define BUF_SIZE 16
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *c1;
-	unsigned char *c2;
-	size_t i;
+	unsigned char	*c1;
+	unsigned char	*c2;
+	size_t			i;
 
 	c1 = (unsigned char *)dest;
 	c2 = (unsigned char *)src;
 	i = 0;
-
 	while (i < n)
 	{
 		c1[i] = c2[i];
 		i++;
 	}
-	return dest;
+	return (dest);
 }
 
 // int main(void)
@@ -41,7 +38,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 
 // 	memset(buf1, '\0', BUF_SIZE);
 // 	memset(buf2, '\0', BUF_SIZE);
-	
+
 // 	memset(buf1, 'b', 4);
 // 	memset(buf1, 'a', 2);
 

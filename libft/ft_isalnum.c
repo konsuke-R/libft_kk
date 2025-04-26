@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
@@ -37,4 +35,3 @@ int ft_isalnum(int c)
 // 		printf("not isalnum\n");
 // 	return (0);
 // }
-

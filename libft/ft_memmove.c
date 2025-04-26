@@ -10,22 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
 #define BUF_SIZE 16
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *s1;
-	const unsigned char *s2;
+	unsigned char		*s1;
+	const unsigned char	*s2;
 
 	if (dest <= src)
 	{
 		s1 = (unsigned char *)dest;
 		s2 = (const unsigned char *)src;
-
 		while (n--)
 			*s1++ = *s2++;
 	}
@@ -38,7 +35,5 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		while (n--)
 			*--s1 = *--s2;
 	}
-	return dest;
+	return (dest);
 }
-
-
