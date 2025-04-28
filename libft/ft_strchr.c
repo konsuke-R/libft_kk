@@ -6,7 +6,7 @@
 /*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 09:30:59 by kkono             #+#    #+#             */
-/*   Updated: 2025/04/26 09:32:54 by kkono            ###   ########.fr       */
+/*   Updated: 2025/04/28 13:11:21 by kkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strchr(const char *str, int c)
 	while (1)
 	{
 		if (str[i] == (char)c)
-			return (char *)(str + i);
+			return ((char *)(str + i));
 		if (str[i] == '\0')
 			break ;
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 
 // int main(int ac, char **av)

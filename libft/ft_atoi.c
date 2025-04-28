@@ -6,7 +6,7 @@
 /*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 02:49:07 by kkono             #+#    #+#             */
-/*   Updated: 2025/04/26 12:04:55 by kkono            ###   ########.fr       */
+/*   Updated: 2025/04/28 12:45:45 by kkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ int	ft_atoi(const char *nptr)
 // 	ans2 = ft_atoi(ptr2);
 // 	ans3 = ft_atoi(ptr3);
 
-// 	printf("ptr1 : %d\n",ans1);
-// 	printf("ptr2 : %d\n",ans2);
-// 	printf("ptr3 : %d\n",ans3);
+// 	printf("ptr1 : %d\n", ans1);
+// 	printf("ptr2 : %d\n", ans2);
+// 	printf("ptr3 : %d\n", ans3);
 
 // 	return (0);
 // }

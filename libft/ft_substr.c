@@ -6,20 +6,21 @@
 /*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 09:32:09 by kkono             #+#    #+#             */
-/*   Updated: 2025/04/26 09:32:33 by kkono            ###   ########.fr       */
+/*   Updated: 2025/04/28 13:00:49 by kkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*copy_substr(char *substr, char const *s, unsigned int start,
+			size_t len);
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	s_len;
-	size_t	j;
 
 	s_len = 0;
-	j = 0;
 	while (s[s_len])
 		s_len++;
 	if (start >= s_len)
@@ -35,6 +36,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
+	substr = copy_substr(substr, s, start, len);
+	return (substr);
+}
+
+char	*copy_substr(char *substr, char const *s, unsigned int start,
+		size_t len)
+{
+	size_t	j;
+
+	j = 0;
 	while (j < len)
 	{
 		substr[j] = s[start + j];
@@ -43,3 +54,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[j] = '\0';
 	return (substr);
 }
+
+// while (j < len)
+// {
+// 	substr[j] = s[start + j];
+// 	j++;
+// }
+// substr[j] = '\0';
