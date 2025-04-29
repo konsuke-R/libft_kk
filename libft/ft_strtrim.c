@@ -6,7 +6,7 @@
 /*   By: kkono <kkono@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 09:32:04 by kkono             #+#    #+#             */
-/*   Updated: 2025/04/28 19:51:43 by kkono            ###   ########.fr       */
+/*   Updated: 2025/04/30 07:02:21 by kkono            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char *ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	first = 0;
 	last = ft_strlen(s1) - 1;
-	while (is_inset(s1[first], set))
+	while (s1[first] && is_inset(s1[first], set))
 		first++;
-	while (is_inset(s1[last], set))
+	while (last > first && is_inset(s1[last], set))
 		last--;
 	str_trimmed = (char *)malloc(sizeof(char) * (last - first + 2));
 	if (!str_trimmed)
